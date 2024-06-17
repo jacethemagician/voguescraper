@@ -1,0 +1,10 @@
+# Ignore all folders
+*/
+
+# Ignore specific files
+chromedriver.exe
+LICENSE.chromedriver
+*.zip
+
+# Unignore the specific Python script (if needed)
+!vogue_se.py
