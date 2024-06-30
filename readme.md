@@ -2,13 +2,13 @@
 
 **✅Latest Commit:** _2024-06-30_
 
-This project is a Python script for downloading images from Vogue fashion shows. It uses Selenium to automate the web browser, fetch the images, and save them locally.
+A simple Python script for downloading images from Vogue fashion shows. It uses Selenium to automate the web browser, fetch the images, and save them locally.
 
 ## 🚀Features
 - **Automated Browsing:** Uses Selenium WebDriver to navigate and interact with the Vogue website.
 - **Image Downloading:** Downloads images from a specified fashion show season and brand.
 - **Directory Management:** Creates and manages directories for saving images.
-- **Paywall Handling:** Attempts to disable paywalls on the Vogue website.
+- **Paywall Ad Handling:** Attempts to disable the ad banner on the Vogue website.
 - **Incremental Scrolling:** Scrolls the page incrementally to load more content, with an option for the user to enable or disable scrolling.
 
 ## 📋Requirements
