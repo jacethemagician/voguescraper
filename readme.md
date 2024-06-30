@@ -1,26 +1,17 @@
 # Vogue Fashion Show Image Scraper
 
-**Latest Commit:** ✅ _2024-06-30_
+**✅Latest Commit:** _2024-06-30_
 
 This project is a Python script for downloading images from Vogue fashion shows. It uses Selenium to automate the web browser, fetch the images, and save them locally.
 
-## Table of Contents
-- [Features](#features)
-- [Requirements](#requirements)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Troubleshooting](#troubleshooting)
-- [License](#license)
-- [Legal Disclaimer](#legal-disclaimer)
-
-## Features
+## 🚀Features
 - **Automated Browsing:** Uses Selenium WebDriver to navigate and interact with the Vogue website.
 - **Image Downloading:** Downloads images from a specified fashion show season and brand.
 - **Directory Management:** Creates and manages directories for saving images.
 - **Paywall Handling:** Attempts to disable paywalls on the Vogue website.
 - **Incremental Scrolling:** Scrolls the page incrementally to load more content, with an option for the user to enable or disable scrolling.
 
-## Requirements
+## 📋Requirements
 - Python 3.7+
 - Google Chrome browser
 - ChromeDriver
@@ -33,7 +24,7 @@ This project is a Python script for downloading images from Vogue fashion shows.
   - lxml
   - tqdm
 
-## Installation
+## 💾Installation
 
 1. **Clone the Repository:**
    ```sh
@@ -46,7 +37,7 @@ This project is a Python script for downloading images from Vogue fashion shows.
    pip install -r requirements.txt
    ```
 
-## Usage
+## 🕹️Usage
 
 1. **Run the Script:**
    ```sh
@@ -70,7 +61,7 @@ This project is a Python script for downloading images from Vogue fashion shows.
    The script will navigate to the specified season's page, scroll to load all images (if enabled), and download them into a directory named after the brand and season.
    - The saved directory is named in the format of brand + season (e.g., `yohji-yamamoto_Fall 2024 Ready-to-Wear`).
 
-## Troubleshooting
+## ⚠️Troubleshooting
 
 1. **ChromeDriver Issues:**
    Ensure you have the latest version of ChromeDriver compatible with your Chrome browser. This is managed by `webdriver_manager`, but manual checks can help.
@@ -81,14 +72,12 @@ This project is a Python script for downloading images from Vogue fashion shows.
 3. **Slow Performance:**
    Increase the sleep intervals in the `scroll_incrementally` function to allow more time for content to load.
 
-## License
+## ⚖️License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## Legal Disclaimer
+## 🛡️Legal Disclaimer
 
 This project is not affiliated with, endorsed by, or in any way associated with Vogue or its parent company. The content and images accessed through this script are the property of Vogue and are used for educational and non-commercial purposes only. 
 
 By using this script, you agree to use it responsibly and acknowledge that the developers of this project are not liable for any misuse. If the usage of this script is found to harm the web integrity or violate the terms of service of Vogue, the developers will take immediate action to remove or modify the script as necessary.
-
----
