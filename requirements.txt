@@ -1,0 +1,6 @@
+requests
+lxml
+loguru
+selenium
+webdriver-manager
+tqdm

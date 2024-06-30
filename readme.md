@@ -1,24 +1,24 @@
 # Vogue Fashion Show Image Scraper
 
-**Latest Commit:** ✅ _2024-06-17_
+**Latest Commit:** ✅ _2024-06-30_
 
-This project is a Python script for downloading images from Vogue fashion shows. It uses Selenium to automate the web browser, fetch the images, and save them locally. This README provides an overview of the script, its usage, and its dependencies.
-
-Currently only runs for Yohji Yamamoto because I'm a Yoji fan.
+This project is a Python script for downloading images from Vogue fashion shows. It uses Selenium to automate the web browser, fetch the images, and save them locally.
 
 ## Table of Contents
 - [Features](#features)
 - [Requirements](#requirements)
+- [Installation](#installation)
 - [Usage](#usage)
 - [Troubleshooting](#troubleshooting)
 - [License](#license)
+- [Legal Disclaimer](#legal-disclaimer)
 
 ## Features
 - **Automated Browsing:** Uses Selenium WebDriver to navigate and interact with the Vogue website.
-- **Image Downloading:** Downloads images from a specified fashion show season.
+- **Image Downloading:** Downloads images from a specified fashion show season and brand.
 - **Directory Management:** Creates and manages directories for saving images.
 - **Paywall Handling:** Attempts to disable paywalls on the Vogue website.
-- **Incremental Scrolling:** Scrolls the page incrementally to load more content.
+- **Incremental Scrolling:** Scrolls the page incrementally to load more content, with an option for the user to enable or disable scrolling.
 
 ## Requirements
 - Python 3.7+
@@ -31,7 +31,20 @@ Currently only runs for Yohji Yamamoto because I'm a Yoji fan.
   - selenium
   - webdriver_manager
   - lxml
+  - tqdm
 
+## Installation
+
+1. **Clone the Repository:**
+   ```sh
+   git clone https://github.com/yourusername/vogue-fashion-show-scraper.git
+   cd vogue-fashion-show-scraper
+   ```
+
+2. **Install the Required Python Packages:**
+   ```sh
+   pip install -r requirements.txt
+   ```
 
 ## Usage
 
@@ -39,13 +52,23 @@ Currently only runs for Yohji Yamamoto because I'm a Yoji fan.
    ```sh
    python vogue_se.py
    ```
+   - A Chrome webpage will pop up. Do not close the page unless the program completes or fails.
 
 2. **Enter the Fashion Show Season:**
    When prompted, enter the season name (e.g., `Fall 2024 Ready-to-Wear`).
+   - Pay attention to spaces and format.
 
-3. **Wait for Images to Download:**
-   The script will navigate to the specified season's page, scroll to load all images, and download them into a directory named after the season.
+3. **Enter the Brand Name:**
+   When prompted, enter the brand name (e.g., `yohji-yamamoto`).
+   - If unsure, check the brand name on Vogue. The format should be lowercase letters connected with hyphens.
 
+4. **Choose to Scroll or Not:**
+   When prompted, enter `yes` to enable scrolling to load more images or `no` to disable scrolling.
+   - This parameter controls whether to mimic scrolling on the specific runway webpage. It's almost always `yes`, but in some rare scenarios, it can be `no`. Please try it out.
+
+5. **Wait for Images to Download:**
+   The script will navigate to the specified season's page, scroll to load all images (if enabled), and download them into a directory named after the brand and season.
+   - The saved directory is named in the format of brand + season (e.g., `yohji-yamamoto_Fall 2024 Ready-to-Wear`).
 
 ## Troubleshooting
 
@@ -53,13 +76,10 @@ Currently only runs for Yohji Yamamoto because I'm a Yoji fan.
    Ensure you have the latest version of ChromeDriver compatible with your Chrome browser. This is managed by `webdriver_manager`, but manual checks can help.
 
 2. **Website Changes:**
-   Vogue's website structure might change, affecting the script. Inspect the elements and update the XPath selectors accordingly.
+   Vogue's website structure might change, affecting the script. Further tweaks might be necessary based on the site's updates.
 
 3. **Slow Performance:**
    Increase the sleep intervals in the `scroll_incrementally` function to allow more time for content to load.
-
-4. **Paywall Issues:**
-   The script includes a basic paywall bypass that might not work for all cases. Further tweaks might be necessary based on the site's updates.
 
 ## License
 
