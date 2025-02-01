@@ -1,6 +1,10 @@
 # Vogue Fashion Show Image Scraper
 
-**✅Latest Commit:** _2024-06-30_
+**⚠️ Proxy Notice (2025-02-01)**  
+🚨 ChromeDriver compatibility issues on Windows when using proxies  
+- **Workaround:** Disable proxy in settings or use direct connection  
+
+**✅Latest Commit:** _2025-02-01_
 
 A simple Python script for downloading images from Vogue fashion shows. It uses Selenium to automate the web browser, fetch the images, and save them locally.
 
